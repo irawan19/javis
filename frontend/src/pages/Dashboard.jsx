@@ -23,7 +23,6 @@ export default function Dashboard() {
   };
 
   useEffect(() => {
-    // === ANIMASI HEXAGON SEPERTI LOGIN ===
     const canvas = document.getElementById("hex-canvas");
     const ctx = canvas.getContext("2d");
     let hexagons = [];
@@ -34,7 +33,7 @@ export default function Dashboard() {
     const HEX_GAP = 5;
     const PULSE_SPEED = 0.002;
     const MOUSE_RADIUS = 250;
-    const HEX_BASE_COLOR_RGB = "16, 185, 129"; // emerald-500 (selaras login)
+    const HEX_BASE_COLOR_RGB = "16, 185, 129";
 
     function drawHexagon(x, y, radius, color, lineWidth) {
       ctx.beginPath();
@@ -76,8 +75,8 @@ export default function Dashboard() {
 
     function animate() {
       const gradient = ctx.createLinearGradient(0, 0, canvas.width, canvas.height);
-      gradient.addColorStop(0, "#f0fdf4"); // brand-green-50
-      gradient.addColorStop(1, "#dcfce7"); // brand-green-100
+      gradient.addColorStop(0, "#f0fdf4");
+      gradient.addColorStop(1, "#dcfce7");
       ctx.fillStyle = gradient;
       ctx.fillRect(0, 0, canvas.width, canvas.height);
 
@@ -128,10 +127,8 @@ export default function Dashboard() {
 
   return (
     <div className="relative flex h-screen overflow-hidden font-sans text-gray-700">
-      {/* === BACKGROUND HEXAGON === */}
       <canvas id="hex-canvas" className="absolute inset-0 w-full h-full -z-10" />
 
-      {/* === SIDEBAR === */}
       <aside className="relative z-10 w-64 bg-white/80 backdrop-blur-md border-r border-emerald-200 shadow-sm flex flex-col p-6">
         <div className="mb-10 text-center">
           <h1 className="text-lg font-bold text-emerald-700">
@@ -159,9 +156,7 @@ export default function Dashboard() {
         </div>
       </aside>
 
-      {/* === MAIN CONTENT === */}
       <main className="relative z-10 flex-1 flex flex-col bg-white/70 backdrop-blur-sm">
-        {/* Header */}
         <header className="flex justify-between items-center p-4 border-b border-gray-200 bg-white/80 backdrop-blur-md shadow-sm">
           <h2 className="text-lg font-semibold text-emerald-700">
             Dashboard Utama
@@ -169,7 +164,6 @@ export default function Dashboard() {
           <div className="text-gray-600 text-sm">👤 Admin</div>
         </header>
 
-        {/* Content */}
         <section className="flex-1 p-8 overflow-auto">
           <div className="bg-white/90 backdrop-blur-sm rounded-2xl shadow-lg p-8 border border-emerald-100">
             <h3 className="text-lg font-semibold text-emerald-700 mb-2">
