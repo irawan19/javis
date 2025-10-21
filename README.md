@@ -7,7 +7,7 @@ CREATE DATABASE javis;
 ```
 
 ### Jalankan Backend
-Ubah .env sesuai dengan konfigurasi database di lcoal
+Ubah .env sesuai dengan konfigurasi database di local
 ```bash
 cd backend
 npm install
